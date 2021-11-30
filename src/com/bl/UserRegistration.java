@@ -7,7 +7,7 @@ public class UserRegistration {
 	static Scanner scan = new Scanner(System.in);
 
 	public void firstNameValidation() {
-		System.out.print("Enter Last Name :- "); // User Enters First Name
+		System.out.print("Enter first Name :- "); // User Enters First Name
 		String firstName = scan.nextLine();
 		String nameRegex = "^[A-Z][A-Z a-z]{3,}$"; // Conditions of Entering Last name
 		Pattern pattern = Pattern.compile(nameRegex);
