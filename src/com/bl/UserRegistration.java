@@ -9,7 +9,7 @@ public class UserRegistration {
 	public void passwordValidation() {
 		System.out.print("Enter Password :- "); // User Enters Password
 		String password = scan.nextLine();
-		String passRegex = "^[A-Za-z0-9]{8,}"; // Conditions for Email Address
+		String passRegex = "^(?=.*[A-Z])[A-Za-z0-9]{7,}$"; // Rules for Password - At least one Upper Case Character
 		Pattern pattern = Pattern.compile(passRegex);
 		Matcher matcher = pattern.matcher(password);
 		System.out.println("First name pattern matching :- " + matcher.matches());
