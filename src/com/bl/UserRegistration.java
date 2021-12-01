@@ -6,12 +6,12 @@ import java.util.regex.*;
 public class UserRegistration {
 	static Scanner scan = new Scanner(System.in);
 
-	public void lastNameValidation() {
-		System.out.print("Enter Last Name :- "); // User Enters Last Name
-		String lastName = scan.nextLine();
-		String nameRegex = "^[A-Z][A-Z a-z]{3,}$"; // Conditions of Entering Last name
-		Pattern pattern = Pattern.compile(nameRegex);
-		Matcher matcher = pattern.matcher(lastName);
+	public void emailIDValidation() {
+		System.out.print("Enter Email Address :- "); // User Enters Email Address
+		String emailID = scan.nextLine();
+		String emailRegex = "^[a-z0-9-._]{1,}+[@][a-z0-9 .]{1,}$"; // Conditions for Email Address
+		Pattern pattern = Pattern.compile(emailRegex);
+		Matcher matcher = pattern.matcher(emailID);
 		System.out.println("First name pattern matching :- " + matcher.matches());
 	}
 }
